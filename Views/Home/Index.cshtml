@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Basic Table</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Ma sinh vien</th>
+                                <th>Ho ten</th>
+                                <th>Ngay sinh</th>
+                                <th>Lop</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach( var i in ViewBag.danhsachsinhvien)
+                            {
+                                <tr>
+                                    <td>@i.MaSinhVien</td>
+                                    <td>@i.HoTen</td>
+                                    <td>@i.NgaySinh</td>
+                                    <td>@i.Lop</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
